@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carteirinha V-ON</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fontAwesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.min.css">
+</head>
+<body>
+	<main>
+		<section>
+			<h1 class="titulo-vacinacao">Vacinação</h1>
+			
+			<img src="img/vacinacao1.jpg" alt="" class="img-conscientizacao">
+
+			<p>A vacinação é uma das medidas mais importantes de prevenção contra doenças. É muito melhor e mais fácil prevenir uma enfermidade do que tratá-la, e é isso que as vacinas fazem.</p>
+
+			<p>A vacinação não apenas protege aqueles que recebem a vacina, mas também ajuda a comunidade como um todo. Quanto mais pessoas de uma comunidade ficarem protegidas, menor é a chance de qualquer uma delas – vacinada ou não – seja contaminada.</p>
+
+			<p><a href="http://buscasaude.prefeitura.sp.gov.br">Clique aqui</a> para obter informações das unidades de saúde da rede SUS do Município de São Paulo.</p>
+		</section>
+
+		<section>
+			<h1 class="titulo-sobre">Sobre</h1>
+			<p>Este é um site para cadastro de vacinas que dispensa o uso de carteirinhas físicas. Logo abaixo você irá encontrar um formulário para realizar os cadastros das vacinas.</p>
+		</section>
+
+		<form class="formulario">
+			<fieldset>
+				<legend>Cadastro:</legend>
+				
+				<label for="#nome-form">Nome:</label>
+				<input type="text" name="nome" placeholder="Ex: Murilo Miranda" id="nome-form" required>
+				
+				<label for="#vacinas-form">Vacina:</label>
+				<select name="vacinas" id="vacinas-form">
+				<option value="bcg">BCG</option>
+				<option value="hepatiteB">Hepatite B</option>
+				<option value="penta">Penta</option>
+				<option value="vip-vop">VIP e VOP</option>
+				<option value="pneumo10">Pneumo 10</option>
+				<option value="rotavirus">Rotavirus</option>
+				<option value="meningoC">Meningo C</option>
+				<option value="febre-amarela">Febre Amarela</option>
+				<option value="triplice-viral">Tríplice Viral</option>
+				<option value="tetra-viral">Tetra Viral</option>
+				<option value="hepatiteA">Hepatite A</option>
+				<option value="dupla-adulto">Dupla Adulto</option>
+				<option value="hpv">HPV</option>
+				<option value="dtpa">dTpa</option>
+				</select>
+
+				<label for="dia-form">Data da aplicação:</label>
+				<input type="date" name="dataAplicacao" placeholder="Ex: 25/12/2017" id="dia-form">
+				
+				<input type="submit" value="Salvar" class="btn-salvar">
+				<ul class="erros"></ul>
+			</fieldset>
+		</form>
+
+		<span class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Use um clique para alterar, dois para excluir"></span>
+		<table class="table">
+			<thead>
+				<tr> 
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Vacina</th>
+					<th>Data da Aplicação</th>
+					<th>Data do Cadastro</th>
+				</tr>
+			</thead>
+			<tbody class="tabela">
+			
+			</tbody>
+		</table>
+		<small>Última atualização realizada em: <span id="dia"></span></small>
+		<label for="filtra-tabela">
+			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		</label>
+		<input type="text" name="pesquisa" placeholder="Filtrar campos" id="filtra-tabela">
+	</main>
+
+	<script type="text/javascript" src="js/formulario.min.js"></script>
+	<script type="text/javascript" src="js/tabela.min.js"></script>
+	<script type="text/javascript">insereTabela()</script>
+	<script type="text/javascript" src="js/filtro.min.js"></script>
+	<script type="text/javascript" src="js/valida.min.js"></script>
+	<script type="text/javascript" src="jquery3.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+  			$('[data-toggle="tooltip"]').tooltip()
+		});
+	</script>
+</body>
+</html>

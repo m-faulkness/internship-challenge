@@ -1,0 +1,104 @@
+main{
+	width: 70%;
+	margin: 0 auto 150px;
+}
+p{
+	text-align: justify;
+	font-size: 1.2em;
+	margin-left: 15px;
+}
+#nome-form, #vacinas-form, #dia-form{
+	display: block;
+	margin-bottom: 10px;
+}
+label, #nome-form, #vacinas-form, #dia-form{
+	margin-left: 30px;
+}
+.img-conscientizacao{
+	float: right;
+	max-width: 40%;
+	margin: 0 3em;
+	border: 3px solid black;
+	box-sizing: border-box;
+}
+.titulo-sobre{
+	clear: both;
+}
+.titulo-vacinacao, .titulo-sobre{
+	background-color: #fff48e;
+	color: #005ec3;
+	padding: 8px;
+	text-align: center;
+	border-radius: 20px;
+	border: 2px solid black;
+}
+section{
+	box-sizing: content-box;
+}
+.formulario{
+	margin-left: 2%;
+	margin-top: 3%;
+}
+.btn-salvar{
+	padding: .5em 1em;
+	border: 0;
+	border-bottom: 5px solid;
+	color: #fff;
+	background-color:#0c8cd3;
+	border-color: #04324c;
+	width: 100px;
+    display: block;
+    clear: both;
+    margin: 10px 0px;
+    margin-left: 60px;
+}
+.btn-salvar:hover{
+	background-color: #005ec3;
+}
+.btn-salvar:active{
+	margin-top:0px;
+	border: 0;
+}
+.erro{
+	list-style-type: none;
+	color: #ff1a1a;
+}
+#filtra-tabela{
+	margin-top: 2em;
+}
+.table{
+	margin-top: 3em;
+	background-image: url('../img/vacinacaoTabela.png');
+	background-position: bottom;
+}
+.sumir{
+	display: none;
+}
+.fadeOut{
+	opacity: 0;
+	transition: 0.4s;
+}
+th, td{
+	text-align: center;
+}
+th{
+	background-color: #0c8cd3;
+	color: white;
+}
+.fa-info-circle{
+	float: right;
+	position: relative;
+	right: 20px;
+	top: 10px;
+}
+
+@media screen and (max-width: 450px){
+
+	p{
+		clear: both;
+	}
+	.img-conscientizacao{
+		min-width: 95%;
+		margin: 0 auto;
+	}
+}
